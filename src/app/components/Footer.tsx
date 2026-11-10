@@ -14,6 +14,7 @@ export default function Footer() {
               <span>{site.brand}</span>
             </Link>
             <p className="muted">{site.tagline}</p>
+            <p className="footer__disc">{site.disclaimer}</p>
             <Btn href={app.url} size="sm">Download</Btn>
           </div>
           <div className="footer__cols">

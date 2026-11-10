@@ -3,13 +3,18 @@
 // (after release run https://itunes.apple.com/lookup?id=6827161500 and refresh `app` + `specs`).
 
 export const site = {
-  // PLACEHOLDER brand — the app isn't in the App Store yet. Do not use the mockup's working title (it is a third-party brand).
-  brand: "AppName",
+  // Brand per the owner's Privacy Policy §1 / Terms §8: the Higgsfield brand is used under a signed
+  // brand authorization agreement; the App is independently operated by Felix Lindner.
+  // Exact App Store name unknown until release — refresh from the lookup then.
+  brand: "Higgsfield",
   email: "felix@lindnerapp.click",
   year: new Date().getFullYear(),
-  // PLACEHOLDER operator, derived from the email domain — must match the App Store seller after release.
-  operator: "Lindner Apps",
-  tagline: "AI video generator for iPhone. Text to Video and Image to Video in one app.",
+  operator: "Felix Lindner",
+  address: "Prierosser Str. 45, 12357 Berlin, Germany",
+  tagline: "AI video creator for iPhone. Text to Video, Image to Video and AI Chat in one app.",
+  // wording follows section 8 of the owner's Terms of Use
+  disclaimer:
+    "AI video creator for iPhone, independently operated by Felix Lindner. HIGGSFIELD and associated marks belong to their respective rights holders and are used under a signed brand authorization agreement. Higgsfield Inc. is not the publisher of this App.",
 };
 
 export const app = {
@@ -27,16 +32,17 @@ export const nav = [
   { to: "/contact", label: "Contact" },
 ];
 
-// Everything below follows the app's own screens (app design file → Design [MVP]):
-// Home, Create (Text to Video / Image to Video, 1:1 · 1080p · 5s · sound), Result, Prompt Bank,
-// History, AI Chat. Nothing is claimed beyond them.
-export const ticker = ["Text to Video", "Image to Video", "1080p", "Sound on", "Prompt Bank", "AI Chat", "History", "One-tap Save"];
+// Everything below follows the app's own screens (app design file → Design [MVP]) and the owner's
+// Terms §2 / Privacy §2: text or (multiple) reference images → video, format · resolution · duration · sound,
+// Prompt Bank, AI Chat with image attachments or camera, local History & Favorites, copy, recreate,
+// save to Photos, share, delete. AI by fal.ai and OpenAI. Nothing is claimed beyond them.
+export const ticker = ["Text to Video", "Image to Video", "1080p", "Sound on", "Prompt Bank", "AI Chat", "History & Favorites", "Save to Photos"];
 
 export const features = [
   { dot: "blue", tag: "Create", title: "Text to Video", text: "Describe the characters, action, camera movement and style. The app turns your words into a clip.", img: "/images/phone-text2video.webp" },
-  { dot: "pink", tag: "Create", title: "Image to Video", text: "Add a reference photo and explain how it should move. The app animates it into a video.", img: "/images/phone-image2video.webp" },
-  { dot: "lime", tag: "Result", title: "Watch & Save", text: "Play the result with its prompt right underneath. Like what you see? Tap Save to keep it.", img: "/images/phone-result.webp" },
-  { dot: "white", tag: "Library", title: "History", text: "Every generation stays in History. Filter by Text to Video or Image to Video and keep favorites close.", img: "/images/phone-history.webp" },
+  { dot: "pink", tag: "Create", title: "Image to Video", text: "Add one or more reference photos and explain how they should move. The app animates them into a video.", img: "/images/phone-image2video.webp" },
+  { dot: "lime", tag: "Result", title: "Watch & Save", text: "Play the result with its prompt right underneath. Save it to Photos, share it, or recreate it for another take.", img: "/images/phone-result.webp" },
+  { dot: "white", tag: "Library", title: "History", text: "Every generation stays in History on your iPhone. Filter by type, keep favorites close, delete what you don't need.", img: "/images/phone-history.webp" },
 ];
 
 // Prompt Bank presets as named in the app. Prompts for Ramen and the snow scene are the app's own
@@ -65,36 +71,37 @@ export const historyFilters = ["All", "Favorite", "Text to Video", "Image to Vid
 
 export const steps = [
   { n: "01", title: "Get the app", text: "Download it from the App Store on your iPhone." },
-  { n: "02", title: "Describe it", text: "Write a prompt, add a reference photo or pick a scene from Prompt Bank." },
-  { n: "03", title: "Generate & save", text: "Tap Generate, watch the result and save the clips you love." },
+  { n: "02", title: "Describe it", text: "Write a prompt, add reference photos or pick a scene from Prompt Bank." },
+  { n: "03", title: "Generate & save", text: "Tap Generate, watch the result and save the clips you love to Photos." },
 ];
 
 export const screens = [
   { name: "Home", text: "Start Generating in one tap, jump to Text to Video or Image to Video, or browse Prompt Bank.", img: "/images/phone-home.webp" },
   { name: "Create", text: "Write a prompt or add reference photos, then set the ratio, resolution, length and sound.", img: "/images/phone-create-keyboard.webp" },
-  { name: "Result", text: "Watch the clip with its prompt underneath and save it in one tap.", img: "/images/phone-result.webp" },
+  { name: "Result", text: "Watch the clip with its prompt underneath, then save it to Photos or share it.", img: "/images/phone-result.webp" },
   { name: "Prompt Bank", text: "Ready-made scenes — open one, copy its prompt or recreate it.", img: "/images/phone-promptbank.webp" },
-  { name: "History", text: "Every generation in one grid. Filter by type or open your favorites.", img: "/images/phone-history.webp" },
-  { name: "AI Chat", text: "Talk an idea through, attach an image for context and shape the wording.", img: "/images/phone-aichat.webp" },
+  { name: "History", text: "Every generation in one grid, stored on your iPhone. Filter by type, open favorites or delete results.", img: "/images/phone-history.webp" },
+  { name: "AI Chat", text: "Talk an idea through, attach an image or snap one with the camera, and shape the wording.", img: "/images/phone-aichat.webp" },
 ];
 
 export const storeShots = ["/images/store-1-home.webp", "/images/store-2-create.webp", "/images/store-3-result.webp", "/images/store-4-promptbank.webp"];
 
-// PLACEHOLDER values ("—" and drafts) — refresh from the iTunes lookup after release.
+// "—" values: refresh from the iTunes lookup after release.
 export const specs: [string, string][] = [
-  ["Developer", "—"],
+  ["Developer", site.operator],
   ["Category", app.category],
   ["Compatibility", `iPhone · iOS ${app.minIOS.split(".")[0]} or later`],
   ["Languages", "English"],
+  ["AI providers", "fal.ai · OpenAI"],
   ["Size", "—"],
   ["Age rating", "—"],
-  ["Price", "Free · In-App Purchases"],
+  ["Subscription", "Auto-renewing, via Apple In-App Purchase"],
 ];
 
 export const principles = [
   { n: "01", title: "Simple first", text: "One Create screen, a few clear settings and a single Generate button." },
   { n: "02", title: "Start from anything", text: "A sentence, a reference photo or a ready scene from Prompt Bank." },
-  { n: "03", title: "Yours to keep", text: "Every result lands in History. Save the ones you like in one tap." },
+  { n: "03", title: "Yours to keep", text: "History and favorites stay on your iPhone. Save the clips you like to Photos." },
 ];
 
 export const faq = [
@@ -102,9 +109,13 @@ export const faq = [
   { q: "How do I turn a photo into a video?", a: "Open Create and switch to Image to Video. Tap + to add a reference photo, describe how it should move, adjust the settings and tap Generate." },
   { q: "What is Prompt Bank?", a: "A collection of ready-made scenes. Open one to read its prompt, then tap Copy Prompt to use it as a starting point or Recreate to generate it right away." },
   { q: "Where do my videos go?", a: "Every generation is saved in History. Use the filters — All, Favorite, Text to Video, Image to Video — to find a clip fast." },
-  { q: "How do I save a video?", a: "Open the result and tap Save." },
-  { q: "How do I cancel my subscription?", a: "Subscriptions are billed through your Apple ID. Manage or cancel them in your iPhone's Settings → your name → Subscriptions. Deleting the app doesn't cancel an active subscription." },
-  { q: "How do I restore a purchase?", a: "Previous purchases can be restored in the app with the same Apple ID they were made with. Refunds and billing are handled by Apple." },
+  { q: "How do I save or share a video?", a: "Open the result and tap Save to add it to your photo library, or share it to another app. The App only asks for permission to add to Photos, not to browse your library." },
+  { q: "Can I delete my history?", a: "Yes. History and favorites are stored on your iPhone, and you can delete individual results or your history in the app. Deleting there doesn't remove videos you've already saved to Photos or shared." },
+  { q: "Where are my prompts and images processed?", a: "To generate videos and answer in AI Chat, your prompts, reference images and chat messages are sent to the AI providers fal.ai and OpenAI, and the results come back to the app. The app doesn't store them on a server of its own. Details are in the Privacy Policy." },
+  { q: "Do I need an internet connection?", a: "Yes. Video generation and AI Chat run on external AI services, so the app needs a network connection. Generation times and output quality can vary." },
+  { q: "Is there anything I can't create?", a: "The app doesn't generate explicit adult (18+) content, and content that is unlawful, infringes others' rights or impersonates real people isn't allowed. See Acceptable use in the Terms of Use." },
+  { q: "How do I cancel my subscription?", a: "Subscriptions renew automatically and are billed through your Apple Account. Manage or cancel them in your iPhone's Settings → your name → Subscriptions before the renewal date. Deleting the app doesn't cancel a subscription." },
+  { q: "How do I restore a purchase?", a: "If a paid subscription isn't recognized, use the restore-purchases option in the app or contact support. Refunds are handled through Apple." },
   { q: "How do I send feedback?", a: `Open Settings in the app and tap Feedback, or write to us at ${site.email}.` },
 ];
 

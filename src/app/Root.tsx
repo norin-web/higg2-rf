@@ -27,7 +27,7 @@ export default function Root() {
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
     const t = titles[path];
     // brand first, so a narrow browser tab still shows the app name
-    document.title = t ? `${site.brand} — ${t}` : `${site.brand} — AI video generator for iPhone`;
+    document.title = t ? `${site.brand} — ${t}` : `${site.brand} — AI video creator for iPhone`;
   }, [path]);
 
   return (

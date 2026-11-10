@@ -13,7 +13,7 @@ export default function About() {
           <Reveal as="span" className="overline">About</Reveal>
           <Split as="h1" className="h-page" parts={[["An idea is enough"]]} />
           <Reveal as="p" className="lead" delay={150}>
-            {site.brand} is an AI video generator for iPhone. You bring a few words or a photo — the app handles the rest.
+            {site.brand} is an AI video creator for iPhone, independently made by {site.operator} in Berlin. You bring a few words or a photo — the app handles the rest.
           </Reveal>
         </div>
       </section>

@@ -176,7 +176,7 @@ function AiChat() {
       <Reveal as="span" className="overline overline--muted">AI Chat</Reveal>
       <Split as="h2" className="h-hero chat__title" parts={[["Stuck on a prompt?"], ["\n"], ["Just ask.", true]]} />
       <Reveal as="p" className="lead chat__sub">
-        Talk an idea through in AI Chat, attach an image for context, then bring the best wording into Create.
+        Talk an idea through in AI Chat, attach an image or snap one with the camera, then bring the best wording into Create.
       </Reveal>
       <div className="chat__phone">
         <Phone src="/images/phone-aichat.webp" alt="AI Chat screen with a question and an attached-image prompt" />
@@ -217,7 +217,7 @@ function WhatYouGet() {
             <Reveal className="get__card get__save" delay={160}>
               <div>
                 <b>Keep the good ones</b>
-                <span className="muted">Like the result? Tap Save and it's yours.</span>
+                <span className="muted">Save it to Photos or share it in one tap.</span>
               </div>
               <span className="savebtn">
                 <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>

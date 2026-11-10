@@ -1,6 +1,6 @@
-# AppName — promo site
+# Higgsfield (AI video creator) — promo site
 
-Promo site for the AppName AI video generator (iOS). React 18 + TypeScript + Vite 6 + React Router 7, plain CSS in `src/styles/index.css`.
+Promo site for the Higgsfield AI video creator for iPhone, operated by Felix Lindner (brand used under authorization). React 18 + TypeScript + Vite 6 + React Router 7, plain CSS in `src/styles/index.css`.
 
 ## Run
 
@@ -17,14 +17,15 @@ In the repo: Settings → Pages → Source: **GitHub Actions** (must be set befo
 
 ### `base` and custom domain — read before touching
 
-- No custom domain (now): `base: "/higg2-rf/"` in `vite.config.ts`, site at `https://norin-web.github.io/higg2-rf/`, no `public/CNAME`.
-- With a domain: switch to `base: "/"` **and** add `public/CNAME` with the bare domain **in the same commit**. Otherwise every asset 404s and the page is blank.
+- Custom domain (now): `higgsfield.rest` — `base: "/"` in `vite.config.ts` **and** `public/CNAME` with the bare domain.
+- Without a domain: `base: "/higg2-rf/"` and no `public/CNAME` (site at `https://norin-web.github.io/higg2-rf/`). Change both in the same commit, or every asset 404s and the page is blank.
 
 All image paths go through `img()` (`src/app/utils/img.ts`) so they follow `base`.
 
 ## Content
 
 - `src/app/content/site.ts` — every brand / app fact (brand, operator, email, App Store ID, features, FAQ, specs). `PLACEHOLDER` values are marked.
+- Source documents for legal texts: `../File/legal/*.docx`.
 - `src/app/content/legal.ts` — Privacy and Terms. Paste the owner's text **verbatim**; only markup changes (`## ` headings, `- ` lists).
 
 ## Motion rule

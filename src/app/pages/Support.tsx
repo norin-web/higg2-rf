@@ -12,8 +12,9 @@ const Chevron = () => (
 const topics = [
   { label: "Creating videos", from: 0 },
   { label: "Prompt Bank & History", from: 2 },
-  { label: "Subscription", from: 5 },
-  { label: "Feedback", from: 7 },
+  { label: "Privacy & content", from: 6 },
+  { label: "Subscription", from: 9 },
+  { label: "Feedback", from: 11 },
 ];
 
 export default function Support() {

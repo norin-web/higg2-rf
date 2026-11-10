@@ -1,7 +1,7 @@
 @import "tailwindcss" source(none);
 
 /* ─────────────────────────────────────────────────────────────
-   AppName (AI video generator) — design system
+   Higgsfield AI video creator promo — design system
    Mirrors the Paper promo design (page Promo (tokens + Handoff artboard).
    Structure from a Framer app template, dark gallery look, colours from the app:
    ink #0F1113 ground, #1C1E20 cards, lime #D1FE17 (the app's Generate button) as the
@@ -589,6 +589,7 @@ button.chip:not(.chip--on):hover { background: var(--line); }
 .footer__brand .logo { font-size: 22px; }
 .footer__brand .logo img { width: 40px; height: 40px; border-radius: 11px; }
 .footer__brand .muted { font-size: 16px; line-height: 1.5; }
+.footer__disc { font-size: 13px; line-height: 1.5; color: var(--dim); }
 .footer__cols { display: flex; flex-wrap: wrap; gap: 32px 48px; }
 .footer__cols > div { display: flex; flex-direction: column; gap: 14px; }
 .footer__cols > div:last-child { width: 100%; }

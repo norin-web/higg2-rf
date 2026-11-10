@@ -4,10 +4,9 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  // No custom domain yet: served at norin-web.github.io/higg2-rf/.
-  // When a domain is attached in Pages settings, switch to "/" AND add public/CNAME in the same commit,
-  // or every asset 404s and the site goes blank.
-  base: "/higg2-rf/",
+  // Custom domain higgsfield.rest (public/CNAME) → served from the root.
+  // If the domain is ever removed, switch back to "/higg2-rf/" AND delete public/CNAME, or every asset 404s.
+  base: "/",
   plugins: [react(), tailwindcss()],
   resolve: { alias: { "@": path.resolve(__dirname, "./src") } },
 });
